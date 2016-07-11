@@ -1,0 +1,18 @@
+<div class="modular-row 3cols">
+<div class="container">
+	<div class="center-block center">{{ page.content }}
+	<h3><div class="headline bg-info">{{ page.header.welcome }}</div></h3>
+</div>
+
+   	<div class="row">
+		{% for column in page.header.columns %}
+		<div class="col-lg-4 col-md-12" >
+			<h3 ><div class="bg-success" style="height:4rem;">{{column.title}}</div></h3>
+			{% for contact in column.contacts %}
+				<h5> <span class="glyphicon glyphicon-{{contact.symbol}}"></span> {{contact.name}} </h5>
+			{% endfor %}
+		</div>
+		{% endfor %}
+	</div>
+	</div>
+</div>

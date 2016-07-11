@@ -1,0 +1,33 @@
+<div class="modular-row bottom center-block">
+  <div class="container">
+    {{page.content}}
+    <div class = "row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <table class="noborder table table-striped">
+          <tr><th>Bank</th><th>IBAN</th><th>BIC (Swift)</th></tr>
+          {% for bank in page.header.banks %}
+          <tr>
+            <td>{{bank.name}}</td>
+            <td>{{bank.iban}}</td>
+            <td>{{bank.bic}}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+    <div class = "row space25">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <ul class="list-group">
+          {% for statement in page.header.info %}
+          <li class="list-group-item">{{ statement.content }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+
+  </div>
+</div>

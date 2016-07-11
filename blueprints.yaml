@@ -1,0 +1,8 @@
+name: Custom 
+version: 1.0
+description: "Custom theme inheriting from Antimatter"
+icon: empire
+author:
+  name: Matthias Lenz
+
+
